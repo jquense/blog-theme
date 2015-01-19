@@ -4,26 +4,15 @@
 	<nav id="main-nav">
 		<span id="rss-link"><a class="subscribe" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i> RSS</a></span>
 	</nav>
-	<div class="inner">
-		{{#if @blog.logo}}
-			<a id="blog-logo" class="js-ajax-link js-show-index" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>
-		{{/if}}
-			<h1 id="blog-name"><a class="js-ajax-link js-show-index" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-		{{#if @blog.description}}
-			<span id="blog-description">{{@blog.description}}</span>
-		{{/if}}
-	</div>
-	{{#if @blog.cover}}
-		<div class="site-cover" style="background-image: url({{@blog.cover}})"></div>
-	{{/if}}
+
+	<h2 id="blog-name"><a href="{{@blog.url}}">{{@blog.title}}</a></h2>
+{{!-- 	{{#if @blog.description}}
+		<span id="blog-description">{{@blog.description}}</span>
+	{{/if}} --}}
 </header>
 
 <div id="post-index" class="container">
-
 	<main class="content" role="main">
-	
 		{{> "loop"}}
-	
 	</main>
-
 </div>
